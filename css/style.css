@@ -1,0 +1,382 @@
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;}
+ul{list-style:none;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;}
+q:before,q:after{content:'';}
+object,embed{vertical-align:top;}
+legend{display:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+img,abbr,acronym,fieldset{border:0;}
+
+/* * {
+    border: solid 1px;
+    color: deeppink;
+} */
+
+html body{
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background: #1d1d1d;
+    font-family: 'Overpass',  "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, p, ul{
+    color: white;
+    mix-blend-mode: difference;
+}
+h1{
+    font-size: min(10vw, 80px);
+    text-align: center;
+}
+h2{
+    font-size: min(7vw, 56px);
+    text-align: center;
+}
+h3{
+    font-size: min(5vw, 40px);
+    text-align: center;
+}
+h4{
+    font-size: min(4vw, 32px);
+}
+p{
+    font-size: min(3vw, 24px);
+    text-align: center;
+    line-height: min(5vw, 1px);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    background: #2e2e2e;
+    font-weight: bold;
+    padding: 0.4em 0;
+}
+
+header .navi {
+    list-style-type: none;
+    mix-blend-mode: normal;
+    text-align: center;
+    width: 100%;
+}
+
+header .navi li{
+    display: inline-block;
+}
+header .navi .center{
+    border-left: solid 1px #ffffff;
+    border-right: solid 1px #ffffff;
+}
+
+header .navi a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: min(3vw, 24px);
+}
+
+header .navi span {
+    color: #8f8f8f;
+}
+
+.attention{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    /* background-color: rgb(105, 0, 0); */
+    border-bottom: solid 1px rgb(255, 255, 255) ;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;;
+}
+/* 
+.container{
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+.sec{
+    scroll-snap-align: start;
+    height: 100%;
+} */
+
+/* section01 */
+.top_image{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.top_image img{
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    animation-name: satAnimation;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes satAnimation{
+    0%{
+        filter: saturate(0%);
+    }
+    10% {
+        filter: saturate(0%);
+    }
+    20%{
+        filter: saturate(100%);
+    }
+    80%{
+        filter: saturate(100%);
+    }
+    100%{
+        filter: saturate(0%);
+    }
+}
+
+.top_image h1{
+    top: 25;
+    opacity: 0%;
+    width: 80%;
+    position: absolute;
+    animation-name: titleAnimation;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    transform: translateX(14%);
+}
+
+.top_image .txt_title{
+    padding-top: 6%;
+}
+
+@keyframes titleAnimation{
+    5%{
+        top: 25%;
+        opacity: 0%;
+    }
+    25%{
+        top: 15%;
+    }
+    40%{
+        opacity: 100%;
+    }
+    100%{
+        top: 15%;
+        opacity: 100%;
+    }
+}
+/* ---section01 */
+
+
+/* section02 */
+.greeting_image{
+    position: relative;
+    width: 100%;
+}
+.greeting_image .sec02_frame{
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.greeting_image h2{
+    top: 5%;
+    width: 100%;
+    position: absolute;
+}
+.greeting_image p{
+    top: 35%;
+    width: 100%;
+    position: absolute;
+    /* line-height: min(6vw, 48px); */
+    line-height: 2.1em;
+}
+/* ---section02 */
+
+/* section03 */
+.infomation{
+    position: relative;
+    width: 100%;
+}
+.infomation img{
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 30;
+}
+.infomation h2{
+    top: 10%;
+    width: 100%;
+    position: absolute;
+    z-index: 31;
+}
+.infomation h3{
+    top: 48%;
+    width: 100%;
+    position: absolute;
+    z-index: 31;
+}
+.infomation p{
+    top: 85%;
+    width: 90%;
+    position: absolute;
+    z-index: 31;
+    text-align: right;
+    font-size: min(4vw, 33px);
+}
+.infomation ul{
+    top: 56%;
+    width: 80%;
+    position: absolute;
+    margin-left: 11%;
+    z-index: 31;
+    text-align: left;
+}
+.infomation li{
+    width: 70%;
+    border: solid;
+    border-width: 0 0 0.08em 0.3em;
+    list-style-type: none;
+    z-index: 31;
+    line-height: 1.5;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-size: min(6vw, 48px);
+    margin-bottom: 0.8em;
+    padding-left: 1em;
+    padding-top: 0.4em;
+}
+ul .b{
+    margin-left: 1.3em;
+}
+ul .c{
+    margin-left: 2.6em;
+}
+/* ---section03 */
+
+/* section04 */
+.access{
+    position: relative;
+    width: 100%;
+}
+.access img{
+    width: 100%;
+    object-fit: cover;
+}
+.access h2{
+    top: 5%;
+    width: 100%;
+    position: absolute;
+}
+.access h3{
+    text-align: center;
+}
+.access h4{
+    text-align: left;
+    padding-left: 2.6em;
+    /* font-size: 1.1em; */
+    /* text-align: center; */
+    font-weight: 550;
+}
+.access .info_access{
+    position: absolute;
+    top: 18%;
+    width: 100%;
+}
+.access .bus{
+    position: absolute;
+    top: 46%;
+    width: 100%;
+}
+.access .bus .a{
+    margin-bottom: 2em;
+}
+.access p{
+    width: 65%;
+    margin: 0 6.5em;
+    line-height: 1;
+    text-align: left; 
+    /* text-align: center; */
+}
+.access .txt_map{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+} 
+
+.access a{
+
+    color: rgb(140, 169, 255);
+    font-style: oblique;
+    font-size: 1em;
+}
+/* ---section04 */
+
+/* section05 */
+
+.submit{
+    width: 100%;
+    position: relative;
+}
+.submit img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.submit h2{
+    top: 14%;
+    width: 100%;
+    position: absolute;
+}
+.submit p{
+    top: 33%;
+    width: 100%;
+    position: absolute;
+    line-height: 2.2em;
+    mix-blend-mode: normal;
+    color: #0c0c0c;
+    font-weight: 600;
+}
+.submit .remark{
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-left: 1em;
+    color: red;
+}
+
+#sec05 { 
+    background-color: #4d4d4d;
+    width: 100%;
+    height: auto;
+}
+
+button{
+    width: 60%;
+    padding: 1em 2em 1em 2em;
+    margin-top: 5em;
+    margin-bottom: 6em;
+    margin-left: 20%;
+    
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    color: #1d1d1d;
+    background-color: #e8e8e8;
+    border: 0.3em solid #4d4d4d;
+    /* border-left: 1.2em solid #4d4d4d; */
+    box-shadow: 0.7em 0.5em #e8e8e8, inset 0.45em 0.25em #1d1d1d;
+}
+
+button:active{
+    box-shadow: 0.35em 0.25em #e8e8e8;
+    transform: translate(0.25em, 0.17em);
+}
+
+.copy{
+    font-weight: 300;
+    font-size: 1em;
+    margin-top: 5em;
+    padding-bottom: 10em;
+}
